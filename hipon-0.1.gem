@@ -1,0 +1,24 @@
+# -*- encoding: utf-8 -*-
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+
+require "hipon/version"
+
+Gem::Specification.new do |s|
+  s.name        = "hipon"
+  s.version     = Hipon::VERSION
+  s.platform    = Gem::Platform::RUBY
+  s.authors     = ["Andre Joseph Cubeta"]
+  s.email       = ["ajcubeta@gmail.com"]
+  s.homepage    = "http://prawn.majesticseacreature.com"
+  s.summary     = "Simplified generating of report using Prawn."
+  s.description = "Hipon allow to generate PDF faster using pre-defined methods cloned from Prawn."
+
+  s.required_rubygems_version = ">= 2.0.2"
+  s.rubyforge_project         = "hipon"
+
+  s.add_runtime_dependency("prawn", ["~>0.12.0"])
+
+  s.files        = Dir.glob("lib/**/*") + %w(LICENSE README.rdoc)
+  s.require_path = 'lib'
+end
